@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATLAS Monoblok AR</title>
+
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+
+<style>
+body {
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#0b0b0b;
+    color:white;
+}
+
+.container {
+    max-width:900px;
+    margin:auto;
+    padding:15px;
+}
+
+.title {
+    font-size:34px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.subtitle {
+    text-align:center;
+    color:#888;
+    margin-bottom:10px;
+}
+
+model-viewer {
+    width:100%;
+    height:55vh;
+    background: radial-gradient(circle, #1a1a1a, #050505);
+    border-radius:15px;
+}
+
+.button {
+    margin-top:15px;
+    padding:18px;
+    border-radius:30px;
+    text-align:center;
+    background: linear-gradient(135deg,#e0e0e0,#bdbdbd);
+    color:#000;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.features {
+    margin-top:15px;
+    color:#aaa;
+    line-height:1.8;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="title">ATLAS Monoblok</div>
+<div class="subtitle">Marine Climate System</div>
+
+<model-viewer 
+    id="model"
+    src="model.glb"
+    ios-src="model.usdz"
+    ar
+    ar-modes="scene-viewer webxr quick-look"
+    camera-controls
+    auto-rotate>
+</model-viewer>
+
+<div class="button" onclick="document.getElementById('model').activateAR()">
+AR ile Görüntüle
+</div>
+
+<div class="features">
+✔ Kompakt Tasarım<br>
+✔ Marine Uyumlu<br>
+✔ Düşük Enerji Tüketimi<br>
+✔ Sessiz Çalışma
+</div>
+
+</div>
+
+</body>
+</html>
